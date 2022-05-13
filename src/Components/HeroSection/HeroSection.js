@@ -172,7 +172,7 @@ const HeroSection = () => {
               account ? 
               <center><div>
                 <h3 style={{color: "green"}}>{`Connected: ${(account).substring(0, 5).concat("...",(account).substring(38,42))}`}</h3><br/>
-                <h4 style={{color: "whitesmoke"}}><u>{`Cost ${Web3.utils.fromWei(cost, "ether")*mintCount} ETH`}</u></h4><br/>
+                {/* <h4 style={{color: "whitesmoke"}}><u>{`Cost ${Web3.utils.fromWei(cost, "ether")*mintCount} ETH`}</u></h4><br/> */}
                 <div className="">
                   <div className="row ">
                       <div className="col-4 ">
