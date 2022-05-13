@@ -176,13 +176,13 @@ const HeroSection = () => {
                 <div className="">
                   <div className="row ">
                       <div className="col-4 ">
-                        <button disabled={mintCount === 25} onClick={()=> setMintCount(mintCount - 1)} className="button">-</button><br/>                  
+                        <button disabled={mintCount === 0} onClick={()=> setMintCount(mintCount - 1)} className="button">-</button><br/>               
                       </div>
                       <div className="col-4 text-center ">
                         <h1 style={{color: "white"}} className="pt-3 pl-5">{mintCount}</h1>                
                       </div>
                       <div className="col-4">
-                        <button disabled={mintCount === 1} onClick={()=> setMintCount(mintCount + 1)} className="button">+</button><br/>
+                        <button  onClick={()=> setMintCount(mintCount + 1)} className="button">+</button><br/>
                       </div>
                     </div>
                 </div>
