@@ -172,17 +172,17 @@ const HeroSection = () => {
               account ? 
               <center><div>
                 <h3 style={{color: "green"}}>{`Connected: ${(account).substring(0, 5).concat("...",(account).substring(38,42))}`}</h3><br/>
-                <h4 style={{color: "whitesmoke"}}><u>{`Cost ${parseInt(Web3.utils.fromWei(cost, "ether"))*mintCount} ETH`}</u></h4><br/>
+                <h4 style={{color: "whitesmoke"}}><u>{`Cost ${Web3.utils.fromWei(cost, "ether")*mintCount} ETH`}</u></h4><br/>
                 <div className="">
                   <div className="row ">
                       <div className="col-4 ">
-                        <button disabled={mintCount === 25} onClick={()=> setMintCount(mintCount + 1)} className="button">+</button><br/>                  
+                        <button disabled={mintCount === 25} onClick={()=> setMintCount(mintCount - 1)} className="button">-</button><br/>                  
                       </div>
                       <div className="col-4 text-center ">
                         <h1 style={{color: "white"}} className="pt-3 pl-5">{mintCount}</h1>                
                       </div>
                       <div className="col-4">
-                        <button disabled={mintCount === 1} onClick={()=> setMintCount(mintCount - 1)} className="button">-</button><br/>
+                        <button disabled={mintCount === 1} onClick={()=> setMintCount(mintCount + 1)} className="button">+</button><br/>
                       </div>
                     </div>
                 </div>
